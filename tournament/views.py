@@ -13,9 +13,9 @@ def hello():
     # return render_template("index.html", players=database.hello_sql())
 
 
-@app.route("/addplayer", methods=["GET"])
-def addplayer_get():
-    return render_template("add_player.html")
+# @app.route("/addplayer", methods=["GET"])
+# def addplayer_get():
+    # return render_template("add_player.html")
 
 
 @app.route("/addplayer", methods=["POST"])
