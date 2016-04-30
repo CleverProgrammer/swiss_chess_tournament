@@ -9,9 +9,15 @@ import os
 
 db_url = os.environ.get("DATABASE_URL", "dbname=tournament")
 conn = psycopg2.connect(db_url)
+
 def hello_sql():
     with conn, conn.cursor() as cur:
         cur.execute('select * from players')
+        return cur.fetchall()
+
+def all_matches():
+    with conn, conn.cursor() as cur:
+        cur.execute('select * from matches')
         return cur.fetchall()
 
 def deleteMatches():
@@ -58,7 +64,7 @@ def playerStandings():
     """
     with conn, conn.cursor() as cur:
         cur.execute('SELECT * FROM standings;')
-        return c.fetchall()
+        return cur.fetchall()
 
 def reportMatch(winner, loser):
     """Records the outcome of a single match between two players.

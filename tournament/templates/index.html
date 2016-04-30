@@ -8,12 +8,22 @@
 <body>
 
 <form action="/addplayer" method="POST">
-    <input name="playername">
+    <input name="winner_id">
+    <input name="loser_id">
     <input type=submit>
 </form>
-
+<table>
+    <tr><th>ID</th><th>NAME</th></tr>
+</table>
 {% for player in players %}
-    <p>Player ID {{ player[0] }} is named {{ player[1] }}</p>
+    <table>
+        <tr><td>{{ player[0] }}</td><td>{{ player[1] }}</td></tr>
+    </table>
+    <!--<p>Player ID {{ player[0] }} is named {{ player[1] }}</p>-->
+{% endfor %}
+
+{% for match in matches %}
+    <p>WINNER ID: {{ match[1] }} AND LOSER ID: {{ match[2] }}</p>
 {% endfor %}
 
 
