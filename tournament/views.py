@@ -6,8 +6,10 @@ from . import database
 @app.route("/")
 def hello():
     # players = database.hello_sql()
-    return render_template('index.html', matches=database.all_matches(),
-                           players=database.hello_sql())
+    return render_template('index.html',
+                           matches=database.all_matches(),
+                           players=database.hello_sql(),
+                           count=database.countPlayers())
     # return render_template("index.html", players=database.hello_sql())
 
 
@@ -30,3 +32,9 @@ def addplayer_post():
 def query_result():
     # query = request.form['Total Player Count']
     return render_template('query.html', query=database.countPlayers())
+
+
+@app.route('/delete', methods=['POST'])
+def remove_players():
+    database.deletePlayers()
+    return redirect(url_for('hello'))

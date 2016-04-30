@@ -7,11 +7,3 @@ body {
     outline: none;
     font-size: 1.2em;
 }
-
-#submit:hover {
-    border: 2px solid black;
-    background: white;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    border-radius: 5px;
-}

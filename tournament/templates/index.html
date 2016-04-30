@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<h1>TOTAL PLAYER COUNT: {{count}} </h1>
 <form action="/addplayer" method="POST">
     <input name="player">
     <!-- <input name="winner_id">
@@ -14,9 +15,12 @@
     <input type="submit">
 </form>
 
-
 <form action="/query" method="POST">
     <input id="submit" type="submit" value="Count Players">
+</form>
+
+<form action="/delete" method="POST">
+    <input id="submit" type="submit" type="submit" value="Delete Players">
 </form>
 
 <table border="1">
