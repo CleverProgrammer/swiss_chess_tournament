@@ -7,6 +7,11 @@
 </head>
 <body>
 
+<form action="/addplayer" method="POST">
+    <input name="playername">
+    <input type=submit>
+</form>
+
 {% for player in players %}
     <p>Player ID {{ player[0] }} is named {{ player[1] }}</p>
 {% endfor %}
