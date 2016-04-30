@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <meta charset="UTF-8">
+    <title>Hi Everyone! This is my first flask + sql app! WOOHOO!!</title>
+</head>
+<body>
+
+{% for player in players %}
+    <p>Player ID {{ player[0] }} is named {{ player[1] }}</p>
+{% endfor %}
+
+</body>
+</html>
