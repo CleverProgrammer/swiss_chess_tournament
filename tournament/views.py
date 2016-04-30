@@ -1,6 +1,8 @@
 from . import app
+from . import database
 
 
 @app.route("/")
 def hello():
-    return "Hello, World!"
+    players = database.hello_sql()
+    return str(players)
