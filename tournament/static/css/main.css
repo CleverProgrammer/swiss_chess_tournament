@@ -1,3 +1,17 @@
 body {
-    background-color: #95a2ff;
+    background-color: #aadcff;
+}
+
+#submit {
+    padding: 10px 10px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+#submit:hover {
+    border: 2px solid black;
+    background: white;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    border-radius: 5px;
 }
